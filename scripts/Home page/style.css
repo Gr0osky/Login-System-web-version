@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(65,105,225);
+}
+
+button{
+    align-content: centers;
+    padding: 5% 20%;
+    margin: 0% 10%;
+    font-size: 1.5em;
+    border-radius: 10px;
+    background-color: rgb(218, 165, 32);
+    border-color: rgb(255, 219, 88);
+    border-width: 3px;
+    font-weight: bolder;
+    font-family: "Ubuntu", serif;
+}
+
+#CreateAcc{
+    margin-top: 35%;
+    margin-left: 5%;
+    margin-right: 5%;
+    transition: transform 0.3s ease;
+}
+
+#login{
+    margin-top: 5%;
+    transition: transform 0.3s ease;
+}
+
+#CreateAcc:hover{
+    transform: scale(1.2);
+    /* background-color: rgb(176, 131, 16); */
+}
+
+#login:hover{
+    transform: scale(1.2);
+}
+
+
+
