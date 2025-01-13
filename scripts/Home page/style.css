@@ -4,8 +4,8 @@ body{
 
 button{
     align-content: centers;
-    padding: 5% 20%;
-    margin: 0% 10%;
+    padding: 24px 70px;
+    margin: 0% 20px;
     font-size: 1.5em;
     border-radius: 10px;
     background-color: rgb(218, 165, 32);
@@ -16,8 +16,9 @@ button{
 }
 
 #CreateAcc{
-    margin-top: 35%;
-    margin-left: 5%;
+    margin-top: 100px;
+    font-size: 7vw;
+    margin-left: 7%;
     margin-right: 5%;
     transition: transform 0.3s ease;
 }
@@ -25,6 +26,7 @@ button{
 #login{
     margin-top: 5%;
     transition: transform 0.3s ease;
+    font-size: 5vw;
 }
 
 #CreateAcc:hover{
@@ -34,6 +36,22 @@ button{
 
 #login:hover{
     transform: scale(1.2);
+}
+
+img{
+    width: 10%;
+    display: block;
+}
+
+label{
+    margin-left: 2%;
+    font-size: 3vw;
+    font-weight: 700;
+    font-family: "Ubuntu", serif;
+}
+
+div{
+    align-items: center;
 }
 
 
