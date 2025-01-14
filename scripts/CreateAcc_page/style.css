@@ -51,8 +51,47 @@ h1{
     display: inline-block;
     background-color: rgb(29, 174, 240);
     border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    align-items: center;
+    margin-bottom: 3%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#PasswordDiv{
+    align-items: center;
+    display: inline-block;
+    background-color: rgb(29, 174, 240);
+    border-radius: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     align-items: center;
     margin-bottom: 3%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+#Password{
+    /* nothing  */
+    font-size: 5vw;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#PassIn{
+    font-size: 1.5em;
+    border-radius: 5px;
+    background-color: rgb(218, 165, 32);
+    color: rgb(30, 81, 235);
+}
+#check{
+    display: inline;
+    zoom: 150%;
+}
+
+p{
+    display: inline;
+    font-weight: 700;
 }
