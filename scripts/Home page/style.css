@@ -1,5 +1,6 @@
 body{
     background-color: rgb(65,105,225);
+    font-family: "Ubuntu", serif;
 }
 
 button{
@@ -39,20 +40,39 @@ button{
 }
 
 img{
-    width: 10%;
+    width: 40%;
     display: block;
 }
 
 label{
     margin-left: 2%;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 700;
     font-family: "Ubuntu", serif;
+    color: bisque;
 }
 
-div{
+
+
+#container{
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
+
+#profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#head1 h2{
+    margin: 0;
+    font-size: 6vh;
+    font-weight: 900;
+}
+
 
 
 
