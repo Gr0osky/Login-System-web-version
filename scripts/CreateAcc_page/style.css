@@ -47,6 +47,7 @@ h1{
 }
 
 #UsernameDiv{
+    display: block;
     align-items: center;
     display: inline-block;
     background-color: rgb(29, 174, 240);
@@ -57,6 +58,7 @@ h1{
     margin-bottom: 3%;
     padding-right: 20px;
     padding-left: 20px;
+    margin-bottom: 10px;
 }
 
 #PasswordDiv{
@@ -71,6 +73,7 @@ h1{
     padding-right: 20px;
     padding-left: 20px;
     margin-bottom: 10px;
+    margin-top:10px;
 }
 
 
@@ -108,6 +111,7 @@ p{
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-top: 40px;
 }
 
 #SubmitBtn{
@@ -124,7 +128,7 @@ p{
     cursor: pointer;
     outline: none;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-    margin-top: 20px;
+    margin-top: 5%;
 }
 
 #SubmitBtn:hover{
@@ -134,5 +138,9 @@ p{
 .pop-button:active{
     transform: scale(1.2);
     box-shadow: 0px 2px 3px rgba(0,0,0, 0.2)
+}
+
+li{
+    font-weight: 600;
 }
 
