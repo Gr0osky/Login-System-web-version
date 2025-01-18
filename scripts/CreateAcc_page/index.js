@@ -11,10 +11,12 @@ let PassMax = document.getElementById("pli3");
 let PassSpec = document.getElementById("pli4");
 let PassCase = document.getElementById("pli5");
 let PassNum = document.getElementById("pli6");
+let UniversalList = [UsernameSpace, UsernameMax, UsernameMin, PassSpace, PassMin, PassMax, PassSpec, PassCase, PassNum]
+let SubmitBtn = document.getElementById("SubmitBtn")
 const SmolAlphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const Bigalphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 const Numbers = [0,1,2,3,4,5,6,7,8,9];
-
+count = 0
 
 
 function checkForPassField(){
@@ -80,5 +82,28 @@ function checkForUsrField(){
         UsernameMax.style.color = "green";
     }
 }
+
+function checkAll(){
+    for(letters in UniversalList){
+        if(letters.style.color == "green"){
+            count += 1;
+        }
+    }
+    if(count == 9){
+        return true
+    }
+    else{
+        return false
+    }
+}
 UsernameField.addEventListener('input', checkForUsrField);
 PasswordField.addEventListener('input', checkForPassField);
+
+SubmitBtn.onclick = function Redirection(){
+    checkAll()
+    if(checkAll == true){
+        // Rediricting to HOme page
+        
+    }
+}
+
