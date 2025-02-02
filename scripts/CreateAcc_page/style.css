@@ -6,6 +6,7 @@ body{
 img{
     width: 10%;
     display: block;
+    cursor: pointer;
 }
 
 label{

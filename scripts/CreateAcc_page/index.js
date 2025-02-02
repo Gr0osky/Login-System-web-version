@@ -13,10 +13,18 @@ let PassCase = document.getElementById("pli5");
 let PassNum = document.getElementById("pli6");
 let UniversalList = [UsernameSpace, UsernameMax, UsernameMin, PassSpace, PassMin, PassMax, PassSpec, PassCase, PassNum]
 let SubmitBtn = document.getElementById("SubmitBtn")
+let info = document.getElementById("info")
+let BackBtn = document.getElementById("BackBtn")
+let Form = document.getElementById("Form")
 const SmolAlphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const Bigalphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 const Numbers = [0,1,2,3,4,5,6,7,8,9];
-count = 0
+
+function redirectUser(){
+     window.location.href = '../Home_page/index.html'
+}
+
+
 
 
 function checkForPassField(){
@@ -84,26 +92,37 @@ function checkForUsrField(){
 }
 
 function checkAll(){
-    for(letters in UniversalList){
-        if(letters.style.color == "green"){
+    let count = 0;
+    for(let i=0; i < UniversalList.length; i++){
+        if(UniversalList[i].style.color == "green"){
             count += 1;
         }
     }
-    if(count == 9){
-        return true
-    }
-    else{
-        return false
-    }
+    console.log(count)
+    return count === UniversalList.length;
 }
 UsernameField.addEventListener('input', checkForUsrField);
 PasswordField.addEventListener('input', checkForPassField);
 
 SubmitBtn.onclick = function Redirection(){
-    checkAll()
-    if(checkAll == true){
+    let Valid = checkAll()
+    if(Valid && Terms.checked){
         // Rediricting to HOme page
-        
+        info.style.color = "#404040";
+        info.textContent = "Account created succesfully";
+        setTimeout(redirectUser, 3000);
+    }
+    else{
+        info.style.color = "#E24848";
+        info.textContent = "Missing information, please go through all the fields again.";
     }
 }
+
+BackBtn.onclick = function Wait_nd_Redirect(){
+    setTimeout(redirectUser, 1000)
+}
+
+Form.addEventListener("submit", function(event){
+    event.preventDefault();
+})
 
