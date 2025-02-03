@@ -20,6 +20,7 @@ const SmolAlphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
 const Bigalphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 const Numbers = [0,1,2,3,4,5,6,7,8,9];
 
+
 function redirectUser(){
      window.location.href = '../Home_page/index.html'
 }
@@ -122,7 +123,35 @@ BackBtn.onclick = function Wait_nd_Redirect(){
     setTimeout(redirectUser, 1000)
 }
 
-Form.addEventListener("submit", function(event){
-    event.preventDefault();
-})
+Form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from actually submitting
+
+    let name = UsernameField.value;
+    let password = PasswordField.value;
+
+    fetch('/save_data', { // URL of your server-side script
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name: name, password: password })
+    })
+    .then(response => {
+        if (!response.ok) { // Check for HTTP errors (400, 500, etc.)
+            throw new Error('Network response was not ok');
+        }
+        return response.json(); 
+    })
+    .then(data => {
+        console.log('Data saved:', data);
+        info.style.color = "#404040";
+        info.textContent = "Account created successfully";
+        setTimeout(redirectUser, 3000);
+    })
+    .catch(error => {
+        console.error('Error saving data:', error);
+        info.style.color = "#E24848";
+        info.textContent = "An error occurred. Please try again later.";
+    });
+});
 
