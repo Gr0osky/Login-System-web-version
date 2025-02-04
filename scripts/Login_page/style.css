@@ -1,0 +1,18 @@
+img{
+    width: 10%;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+ 
+#NameBelow{
+    margin-top: 2px;
+    display: block;
+    margin-left: 2%;
+    font-size: 3vw;
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+}
+
+#UpperProfile{
+    align-items: center;
+}
